@@ -10,5 +10,5 @@ const QuestionSchema = new Schema({
   description: String
 }, {collection: "question"})
 
-const Question = surveyConnection?.model('Question', QuestionSchema)
+export const Question = surveyConnection?.model('Question', QuestionSchema)
 export const QuestionTC = composeMongoose(Question)
