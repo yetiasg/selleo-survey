@@ -18,4 +18,4 @@ const options = {
   autoIndex: true
 } as ConnectOptions
 
-export const surveyConnection = createNewConnection('mongodb://localhost:27017/survey', options)
+export const surveyConnection = createNewConnection('mongodb://mongo:27017/survey', options)

@@ -1,4 +1,4 @@
-import mongoose, {Schema} from 'mongoose'
+import {Schema} from 'mongoose'
 import { composeMongoose } from 'graphql-compose-mongoose'
 import { surveyConnection } from '../dbconnection'
 

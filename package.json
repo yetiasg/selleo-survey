@@ -6,7 +6,9 @@
   "scripts": {
     "start:build": "tsc -w",
     "start:run": "nodemon dist/app.js",
-    "start": "concurrently npm:start:*"
+    "start": "concurrently npm:start:*",
+    "prod:build": "tsc --build",
+    "prod:run": "node dist/app.js"
   },
   "keywords": [],
   "author": "",

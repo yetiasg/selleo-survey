@@ -1,8 +1,8 @@
-import mongoose from 'mongoose'
+import { Schema } from 'mongoose'
 import { composeMongoose } from 'graphql-compose-mongoose'
 import { surveyConnection } from '../dbconnection'
 
-const QuestionSchema = new mongoose.Schema({
+const QuestionSchema = new Schema({
   text: {
     type: String,
     required: true
@@ -10,5 +10,5 @@ const QuestionSchema = new mongoose.Schema({
   description: String
 }, {collection: "question"})
 
-export const Question = surveyConnection?.model('Question', QuestionSchema)
+const Question = surveyConnection?.model('Question', QuestionSchema)
 export const QuestionTC = composeMongoose(Question)
