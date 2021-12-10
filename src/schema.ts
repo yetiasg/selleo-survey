@@ -9,6 +9,7 @@ schemaComposer.Query.addFields({
 })
 
 schemaComposer.Mutation.addFields({
+  answerCreateOne: AnswerTC.mongooseResolvers.createOne(),
   questionCreateOne: QuestionTC.mongooseResolvers.createOne(),
   questionRemoveOne: QuestionTC.mongooseResolvers.removeById(),
   questionUpdateOne: QuestionTC.mongooseResolvers.updateById(),
@@ -20,7 +21,6 @@ schemaComposer.Mutation.addFields({
   //   }, 
   //   resolve: createQuestionOne 
   // },
-  answerCreateOne: AnswerTC.mongooseResolvers.createOne()
 })
 
 export const graphqlSchema = schemaComposer.buildSchema()

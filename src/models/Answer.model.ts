@@ -8,7 +8,7 @@ const AnswerSchema = new Schema({
     ref: 'Question',
     required: true,
     index: true,
-    unique: true
+    unique: false,
   },
   response: {
     type: Number,

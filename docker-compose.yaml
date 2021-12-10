@@ -10,10 +10,10 @@ services:
     build: 
       dockerfile: Dockerfile
       context: .
-    volumes:
-      - /app/node_modules
-      - .:/app
+    # volumes:
+    #   - /app/node_modules
+    #   - .:/app
     environment:
-      - PORT=3005
+      - PORT=3004
     ports:
-      - '3005:3005'
+      - '3005:3004'
