@@ -1,4 +1,4 @@
-import {Schema} from 'mongoose'
+import { Schema} from 'mongoose'
 import { composeMongoose } from 'graphql-compose-mongoose'
 import { surveyConnection } from '../dbconnection'
 
@@ -21,5 +21,5 @@ const AnswerSchema = new Schema({
   }
 }, {timestamps: true})
 
-const Answer = surveyConnection?.model('Aswer', AnswerSchema)
+export const Answer = surveyConnection?.model('Answer', AnswerSchema)
 export const AnswerTC = composeMongoose(Answer)

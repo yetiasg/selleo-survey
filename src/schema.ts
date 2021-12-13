@@ -1,7 +1,25 @@
 import { schemaComposer } from "graphql-compose"
-import { AnswerTC } from "./models/Answer.model"
-import { QuestionTC } from "./models/Question.model"
+import { AnswerTC, Answer } from "./models/Answer.model"
+import { QuestionTC, Question } from "./models/Question.model"
 // import { createQuestionOne } from './resolvers'
+
+AnswerTC.addRelation('question', {
+  resolver: () => QuestionTC.mongooseResolvers.findById(),
+  prepareArgs: {
+    _id: (source: typeof Answer) => source.questionId,
+  },
+});
+
+QuestionTC.addRelation('answers', {
+  resolver: () => AnswerTC.mongooseResolvers.findMany(),
+  prepareArgs: {
+    filter: (source) => ({
+      _operators: {
+        questionId: { in: source._id }
+      },
+    })
+  }
+});
 
 schemaComposer.Query.addFields({
   questionAll: QuestionTC.mongooseResolvers.findMany(),
@@ -22,5 +40,6 @@ schemaComposer.Mutation.addFields({
   //   resolve: createQuestionOne 
   // },
 })
+
 
 export const graphqlSchema = schemaComposer.buildSchema()
