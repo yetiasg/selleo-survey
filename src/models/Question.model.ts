@@ -1,8 +1,16 @@
-import { Schema } from 'mongoose'
+import { Schema, Document } from 'mongoose'
 import { composeMongoose } from 'graphql-compose-mongoose'
 import { surveyConnection } from '../dbconnection'
 
-const QuestionSchema = new Schema({
+interface QuestionI extends Document {
+  text: {
+    type: string;
+    required: boolean;
+  }
+  description: string;
+}
+
+const QuestionSchema = new Schema<QuestionI>({
   text: {
     type: String,
     required: true

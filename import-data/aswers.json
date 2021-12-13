@@ -1,0 +1,97 @@
+[{
+  "_id": {
+    "$oid": "61b6fe348923017405d515fc"
+  },
+  "questionId": {
+    "$oid": "61b6fdd78923017405d515f6"
+  },
+  "response": 5,
+  "surveyId": "sdfawe3",
+  "createdAt": {
+    "$date": "2021-12-13T08:03:00.129Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-13T08:03:00.129Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61b6fe3e8923017405d515fe"
+  },
+  "questionId": {
+    "$oid": "61b6fddd8923017405d515f8"
+  },
+  "response": 8,
+  "surveyId": "sdfawe3",
+  "createdAt": {
+    "$date": "2021-12-13T08:03:10.638Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-13T08:03:10.638Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61b6fe448923017405d51600"
+  },
+  "questionId": {
+    "$oid": "61b6fde28923017405d515fa"
+  },
+  "response": 8,
+  "surveyId": "sdfawe3",
+  "createdAt": {
+    "$date": "2021-12-13T08:03:16.783Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-13T08:03:16.783Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61b6fe558923017405d51602"
+  },
+  "questionId": {
+    "$oid": "61b6fdd78923017405d515f6"
+  },
+  "response": 2,
+  "surveyId": "2erwstawe3",
+  "createdAt": {
+    "$date": "2021-12-13T08:03:33.201Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-13T08:03:33.201Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61b6fe5e8923017405d51604"
+  },
+  "questionId": {
+    "$oid": "61b6fddd8923017405d515f8"
+  },
+  "response": 9,
+  "surveyId": "2erwstawe3",
+  "createdAt": {
+    "$date": "2021-12-13T08:03:42.130Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-13T08:03:42.130Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61b6fe658923017405d51606"
+  },
+  "questionId": {
+    "$oid": "61b6fde28923017405d515fa"
+  },
+  "response": 6,
+  "surveyId": "2erwstawe3",
+  "createdAt": {
+    "$date": "2021-12-13T08:03:49.511Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-13T08:03:49.511Z"
+  },
+  "__v": 0
+}]
