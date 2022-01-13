@@ -15,7 +15,10 @@ const startServer = async () => {
   app.use(helmet());
   app.use(cors());
 
-  const server = new ApolloServer({ schema: graphqlSchema });
+  const server = new ApolloServer({
+    schema: graphqlSchema,
+    introspection: true,
+  });
   await server.start();
   server.applyMiddleware({ app, path: "/ql" });
   await new Promise<void>((resolve) => {
