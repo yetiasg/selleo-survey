@@ -4,9 +4,9 @@
   "description": "",
   "main": "src/app.ts",
   "scripts": {
-    "start:build": "tsc -w",
-    "start:run": "nodemon dist/app.js",
-    "start": "concurrently npm:start:*",
+    "build": "tsc --build",
+    "start:run": "node dist/app.js",
+    "start": "node dist/app.js",
     "prod:build": "tsc --build",
     "prod:run": "NODE_ENV=production node app.js"
   },
