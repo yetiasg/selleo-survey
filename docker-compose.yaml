@@ -1,16 +1,13 @@
 version: '3.9'
 services:
-  mongo:
-    image: mongo:latest
-    ports:
-      - '27017:27017'
-
   server:
     restart: always
     build: 
       dockerfile: Dockerfile
       context: .
-    environment:
-      - PORT=3004
     ports:
-      - '3005:3004'
+      - '3005:3005'
+    environment:
+      - PORT=3005
+      - MONGO_DB_USERNAME=murmeltier
+      - MONGO_BD_PASSWORD=4ixQiIg7p9B5fVGIrAvu
