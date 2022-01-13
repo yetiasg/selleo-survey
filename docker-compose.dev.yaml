@@ -1,0 +1,16 @@
+version: '3.9'
+services:
+  mongo:
+    image: mongo:latest
+    ports:
+      - '27017:27017'
+
+  server:
+    restart: always
+    build: 
+      dockerfile: Dockerfile
+      context: .
+    environment:
+      - PORT=3005
+    ports:
+      - '3005:3004'
